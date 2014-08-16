@@ -20,7 +20,9 @@
  *
  * @return FRDoneAccessory as UIView
  */
-- (id)initWithBackground:(UIImage *)background andButton:(UIImage *)done andTextfield:(UITextField *)textfield;
+- (id)initWithBackground:(UIImage *)background
+               andButton:(UIImage *)done
+            andTextfield:(UITextField *)textfield;
 
 /**
  * Initialize FR Done Accessory
@@ -31,10 +33,12 @@
  *
  * @return FRDoneAccessory as UIView
  */
-- (id)initWithBackground:(UIImage *)background andButton:(UIImage *)done andTextView:(UITextView *)textview;
+- (id)initWithBackground:(UIImage *)background
+               andButton:(UIImage *)done
+             andTextView:(UITextView *)textview;
 
 /**
- * Initialize FR Done Accessory
+ * Initialize FR Done Accessory with native styling
  *
  * @param textfield Textfield to be processed
  *
@@ -43,7 +47,7 @@
 - (id)initWithTextField:(UITextField *)textfield;
 
 /**
- * Initialize FR Done Accessory
+ * Initialize FR Done Accessory with native styling
  *
  * @param textview Textview to be processed
  *
@@ -51,6 +55,35 @@
  */
 - (id)initWithTextView:(UITextView *)textview;
 
-- (id)rebuild;
+/**
+ * Initialize FR Done Accessory with native styling
+ *
+ * @param color Background color
+ * @param buttonLabel Done button label
+ * @param buttonColor Done button color
+ * @param textfield TextField to be processed
+ *
+ * @return FRDoneAccessory as UIView
+ */
+- (id)initWithBackgroundColor:(UIColor *)color
+               andButtonLabel:(NSString *)buttonLabel
+               andButtonColor:(UIColor *)buttonColor
+                 andTextField:(UITextField *)textfield;
+
+/**
+ * Initialize FR Done Accessory with native styling
+ *
+ * @param color Background color
+ * @param buttonLabel Done button label
+ * @param buttonColor Done button color
+ * @param textview Textview to be processed
+ *
+ * @return FRDoneAccessory as UIView
+ */
+- (id)initWithBackgroundColor:(UIColor *)color
+               andButtonLabel:(NSString *)buttonLabel
+               andButtonColor:(UIColor *)buttonColor
+                  andTextView:(UITextView *)textview;
+
 
 @end

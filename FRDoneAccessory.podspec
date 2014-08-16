@@ -16,13 +16,13 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FRDoneAccessory"
-  s.version      = "0.1"
+  s.version      = "0.2"
   s.summary      = "Done button accessory for UITextfield or UITextview"
 
   s.description  = "Done button accessory for UITextfield or UITextview. Use it to add done button on top of the UITextfield or UITextview."
 
   s.homepage     = "https://github.com/freeskys/FRDoneAccessory"
-  # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
+  s.screenshots  = "http://blezcode.com/images/github/FRDoneAccessory/Screenshot_Native.jpg", "http://blezcode.com/images/github/FRDoneAccessory/Screenshot_Styled.jpg"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -71,7 +71,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/freeskys/FRDoneAccessory.git", :tag => "0.1" }
+  s.source       = { :git => "https://github.com/freeskys/FRDoneAccessory.git", :tag => "0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

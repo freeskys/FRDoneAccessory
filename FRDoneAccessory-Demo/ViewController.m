@@ -44,9 +44,11 @@
                                                    andTextView:self.textviewDescription];
     
     // Add accessory to textfield & textview (Without style)
-    FRDoneAccessory *amountAccessory = [[FRDoneAccessory alloc]
-                                        initWithTextField:self.textfieldAmountNative];
-    self.textfieldAmountNative.inputAccessoryView = [amountAccessory rebuild];
+    self.textfieldAmountNative.inputAccessoryView = [[FRDoneAccessory alloc]
+                                                     initWithBackgroundColor:[UIColor blackColor]
+                                                     andButtonLabel:@"Selesai"
+                                                     andButtonColor:[UIColor whiteColor]
+                                                     andTextField:self.textfieldAmountNative];
     self.textviewDescriptionNative.inputAccessoryView = [[FRDoneAccessory alloc]
                                                          initWithTextView:self.textviewDescriptionNative];
 }

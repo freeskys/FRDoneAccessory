@@ -15,7 +15,9 @@ NSInteger const FRDoneAccessoryDefaultButtonHeight = 30;
     UITextField *currentTextfield;
     UITextView *currentTextview;
     
+    UIColor *backgroundColor;
     NSString *buttonDoneLabel;
+    UIColor *buttonDoneColor;
 }
 
 @synthesize buttonDone;
@@ -53,16 +55,22 @@ NSInteger const FRDoneAccessoryDefaultButtonHeight = 30;
     return [self initWithBackground:nil andButton:nil andView:textview];
 }
 
-- (id)rebuild
+- (id)initWithBackgroundColor:(UIColor *)color andButtonLabel:(NSString *)buttonLabel andButtonColor:(UIColor *)buttonColor andTextField:(UITextField *)textfield
 {
-    // Remove button done
-    [buttonDone removeFromSuperview];
+    backgroundColor = color;
+    buttonDoneLabel = buttonLabel;
+    buttonDoneColor = buttonColor;
     
-    if (currentTextfield) {
-        return [self initWithBackground:nil andButton:nil andView:currentTextfield];
-    } else {
-        return [self initWithBackground:nil andButton:nil andView:currentTextview];
-    }
+    return [self initWithBackground:nil andButton:nil andView:textfield];
+}
+
+- (id)initWithBackgroundColor:(UIColor *)color andButtonLabel:(NSString *)buttonLabel andButtonColor:(UIColor *)buttonColor andTextView:(UITextView *)textview
+{
+    backgroundColor = color;
+    buttonDoneLabel = buttonLabel;
+    buttonDoneColor = buttonColor;
+    
+    return [self initWithBackground:nil andButton:nil andView:textview];
 }
 
 /**
@@ -86,7 +94,11 @@ NSInteger const FRDoneAccessoryDefaultButtonHeight = 30;
         if (background) {
             self.backgroundColor = [UIColor colorWithPatternImage:background];
         } else {
-            self.backgroundColor = [UIColor lightGrayColor];
+            if (backgroundColor) {
+                self.backgroundColor = backgroundColor;
+            } else {
+                self.backgroundColor = [UIColor lightGrayColor];
+            }
         }
         
         // If done button image exist, add text if doesn't exist
@@ -107,12 +119,19 @@ NSInteger const FRDoneAccessoryDefaultButtonHeight = 30;
                                           FRDoneAccessoryDefaultButtonHeight);
             
             // Set text to done if the text is empty
-//            if (buttonDone.titleLabel.text) {
+            if (buttonDoneLabel) {
+                [buttonDone setTitle:buttonDoneLabel
+                            forState:UIControlStateNormal];
+            } else {
                 [buttonDone setTitle:@"Done"
                             forState:UIControlStateNormal];
-//            }
+            }
             
-            [buttonDone setTintColor:[UIColor blackColor]];
+            if (buttonDoneColor) {
+                [buttonDone setTintColor:buttonDoneColor];
+            } else {
+                [buttonDone setTintColor:[UIColor blackColor]];
+            }
         }
     
         [buttonDone addTarget:self
