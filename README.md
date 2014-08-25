@@ -16,9 +16,12 @@ Done button accessory for UITextfield or UITextview
 ### Styled
 ![Styled](http://blezcode.com/images/github/FRDoneAccessory/Screenshot_Styled.jpg)
 
-## TODO
-1. Support button position
+## Cocoapod
+Add `pod 'FRDoneAccessory', '~> 0.2'` to your Podfile
 
 ## Release
 1. 0.1 First public release
 2. 0.2 Add native style
+
+## TODO
+1. Support button position
