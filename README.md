@@ -1,5 +1,6 @@
 FRDoneAccessory
 ===============
+[![Build Status](https://travis-ci.org/freeskys/FRDoneAccessory.svg?branch=master)](https://travis-ci.org/freeskys/FRDoneAccessory)
 
 Done button accessory for UITextfield or UITextview
 
