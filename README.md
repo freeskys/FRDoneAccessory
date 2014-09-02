@@ -1,6 +1,9 @@
 FRDoneAccessory
 ===============
 [![Build Status](https://travis-ci.org/freeskys/FRDoneAccessory.svg?branch=master)](https://travis-ci.org/freeskys/FRDoneAccessory)
+[![Pod Version](http://img.shields.io/cocoapods/v/FRDoneAccessory.svg?style=flat)](http://cocoadocs.org/docsets/FRDoneAccessory/)
+[![Pod Platform](http://img.shields.io/cocoapods/p/FRDoneAccessory.svg?style=flat)](http://cocoadocs.org/docsets/FRDoneAccessory/)
+[![Pod License](http://img.shields.io/cocoapods/l/FRDoneAccessory.svg?style=flat)](http://opensource.org/licenses/MIT)
 
 Done button accessory for UITextfield or UITextview
 
